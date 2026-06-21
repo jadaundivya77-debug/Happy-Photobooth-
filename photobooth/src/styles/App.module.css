@@ -1,0 +1,28 @@
+.app {
+  width: 100%;
+  max-width: 980px;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(61, 43, 48, 0.12);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 580px;
+}
+
+@media (max-width: 720px) {
+  .main {
+    grid-template-columns: 1fr;
+  }
+
+  #root {
+    padding: 0;
+  }
+
+  .app {
+    border-radius: 0;
+  }
+}

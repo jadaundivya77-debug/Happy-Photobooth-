@@ -1,0 +1,22 @@
+.chip {
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--dusty);
+  font-size: 11px;
+  background: transparent;
+  color: var(--warm);
+  transition: all 0.15s;
+  letter-spacing: 0.2px;
+}
+
+.chip:hover {
+  background: var(--blush);
+  border-color: var(--rose);
+}
+
+.chip.active {
+  background: var(--blush);
+  border-color: var(--rose);
+  color: var(--warm);
+  font-weight: 500;
+}

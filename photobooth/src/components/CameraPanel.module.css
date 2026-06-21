@@ -1,0 +1,148 @@
+.panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  border-right: 1px dashed var(--dusty);
+}
+
+.camFrame {
+  background: var(--dark);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  border: 3px solid var(--dusty);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.camPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--blush);
+  background: rgba(61, 43, 48, 0.85);
+}
+
+.camPlaceholder i {
+  font-size: 38px;
+}
+
+.camPlaceholder span {
+  font-size: 13px;
+  text-align: center;
+  padding: 0 12px;
+}
+
+.countdownRing {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(61, 43, 48, 0.55);
+  font-family: var(--font-display);
+  font-size: 80px;
+  font-style: italic;
+  color: #fff;
+  pointer-events: none;
+}
+
+.flashOverlay {
+  position: absolute;
+  inset: 0;
+  background: #ffffff;
+  opacity: 0.9;
+  pointer-events: none;
+  animation: flashAnim 0.15s ease-out forwards;
+}
+
+@keyframes flashAnim {
+  from { opacity: 0.9; }
+  to   { opacity: 0; }
+}
+
+.captureMsg {
+  font-size: 12px;
+  color: var(--rose);
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+
+.progressWrap {
+  background: var(--lavender);
+  border-radius: var(--radius-pill);
+  height: 6px;
+  overflow: hidden;
+}
+
+.progressBar {
+  background: var(--rose);
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.3s ease;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  color: var(--rose);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filterRow {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btnRow {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.btn {
+  flex: 1;
+  background: var(--rose);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-pill);
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover { background: var(--warm); }
+.btn:active { transform: scale(0.97); }
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
