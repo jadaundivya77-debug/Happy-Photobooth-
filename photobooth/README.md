@@ -89,22 +89,8 @@ Follow the prompts (link or create a project). Vercel auto-detects Vite — no e
 vercel --prod
 ```
 
-**Option B — GitHub + Vercel dashboard**
 
-1. Push this folder to a new GitHub repository:
-
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: vintage photobooth"
-   git branch -M main
-   git remote add origin <your-repo-url>
-   git push -u origin main
    ```
-
-2. Go to https://vercel.com/new, import the repository.
-3. Framework Preset: **Vite** (auto-detected). Build command `npm run build`, output directory `dist` (defaults, no changes needed).
-4. Click **Deploy**.
 
 Camera access will work on the deployed `https://your-app.vercel.app` URL since Vercel serves over HTTPS.
 
