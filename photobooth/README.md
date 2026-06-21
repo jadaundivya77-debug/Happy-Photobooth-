@@ -66,31 +66,12 @@ photobooth/
 
    > Webcam access requires either `localhost` or HTTPS — `http://localhost:5173` works fine for local dev.
 
-6. To build a production bundle:
-
-   ```bash
-   npm run build
-   npm run preview   # preview the production build locally
-   ```
-
-## Deploying to Vercel
-
-**Option A — Vercel CLI**
-
-```bash
-npm install -g vercel
-cd photobooth
-vercel
-```
-
-Follow the prompts (link or create a project). Vercel auto-detects Vite — no extra config needed. For production deploys:
-
-```bash
-vercel --prod
-```
-
 
    ```
+
+
+
+
 
 Camera access will work on the deployed `https://your-app.vercel.app` URL since Vercel serves over HTTPS.
 
